@@ -123,7 +123,7 @@ Ketiga model punya performa yang sangat berdekatan (selisih AW-MAE < 0,02), sehi
 
 ### Feature Importance (LightGBM, berbasis Gain/Split Count)
 
-Fitur paling dominan untuk kedua target (`team_goals` & `opp_goals`): **`year`** — jauh di atas fitur lain, diikuti `log_gdp_diff`, `temperature_venue`, `log_gdp_opp`/`log_gdp_team`, `log_pop_opp`, `recent_defense`, dan `relative_strength`.
+Fitur paling dominan untuk kedua target (`team_goals` & `opp_goals`): **`year`** jauh di atas fitur lain, diikuti `log_gdp_diff`, `temperature_venue`, `log_gdp_opp`/`log_gdp_team`, `log_pop_opp`, `recent_defense`, dan `relative_strength`.
 
 Dominasi fitur `year` mengindikasikan tren temporal yang kuat pada gaya bermain dan jumlah gol sepanjang 150+ tahun data sepak bola internasional wajar mengingat evolusi taktik, level kompetisi, dan kondisi fisik pemain dari masa ke masa.
 
