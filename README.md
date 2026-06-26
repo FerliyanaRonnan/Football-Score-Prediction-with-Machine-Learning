@@ -80,8 +80,8 @@ Prediksi `2-1` untuk hasil aktual `0-0` jauh lebih mahal dari sekadar selisih sk
 ### Sumber
 
 Tiga file CSV:
-- **train.csv** data historis pertandingan 1872–2011, berisi skor aktual sebagai target (78.772 baris × 47 kolom)
-- **test.csv** data pertandingan 2011–2026 yang harus diprediksi (42.422 baris × 20 kolom)
+- **train.csv** data historis pertandingan 1872-2011, berisi skor aktual sebagai target (78.772 baris × 47 kolom)
+- **test.csv** data pertandingan 2011-2026 yang harus diprediksi (42.422 baris × 20 kolom)
 - **sample submission.csv** format submission kompetisi
 
 Setiap baris merepresentasikan **satu perspektif tim** dalam satu pertandingan artinya satu pertandingan menghasilkan dua baris (perspektif tim dan perspektif lawan), yang penting untuk post-processing konsistensi di akhir pipeline.
@@ -142,7 +142,7 @@ Dominasi fitur `year` mengindikasikan tren temporal yang kuat pada gaya bermain 
 ŷ_final = w_LGBM · ŷ_LGBM + w_XGB · ŷ_XGB + w_CB · ŷ_CB
 ```
 
-Rata-rata setelah pembulatan integer akan kehilangan presisi — rata-rata `1` dan `2` sama-sama jadi `1.5` → `2`, baik berasal dari `1,4` & `1,6` maupun dari kombinasi lain yang sebenarnya kurang akurat.
+Rata-rata setelah pembulatan integer akan kehilangan presisi rata-rata `1` dan `2` sama-sama jadi `1.5` → `2`, baik berasal dari `1,4` & `1,6` maupun dari kombinasi lain yang sebenarnya kurang akurat.
 
 **Consistency post-processing**: karena setiap pertandingan punya 2 baris (2 perspektif), prediksi dari kedua perspektif dirata-rata supaya konsisten:
 
